@@ -1,0 +1,1067 @@
+/*
+	Theme Name: Sensible Foods
+	Theme URI: http://catapultu.com
+	Description: WordPress Theme for Sensible Foods
+	Version: 1.0
+	Author: Daniel Valenzuela 
+	Author URI: http://catapultu.com
+	Tags: HTML5, CSS3, Responsive, eCommerce
+
+	License: MIT
+	License URI: http://opensource.org/licenses/mit-license.php
+*/
+
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+
+/* global box-sizing */
+*,
+*:after,
+*:before {
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+}
+/* html element 62.5% font-size for REM use */
+html {
+	/*font-size:62.5%;*/
+}
+body {
+	font:300 7px/1.4 "Trebuchet MS", Helvetica, sans-serif;
+	color:#444;
+	background-color:#e5e4da;
+}
+/* clear */
+.clear:before,
+.clear:after {
+    content:' ';
+    display:table;
+}
+
+.clear:after {
+    clear:both;
+}
+.clear {
+    *zoom:1;
+}
+img {
+	max-width:100%;
+	vertical-align:bottom;
+}
+a {
+	color:#444;
+	text-decoration:none;
+}
+a:hover {
+	color:#444;
+}
+a:focus {
+	outline:0;
+}
+a:hover,
+a:active {
+	outline:0;
+}
+input:focus {
+	outline:0;
+	border:1px solid #04A4CC;
+}
+
+/*------------------------------------*\
+    STRUCTURE
+\*------------------------------------*/
+
+/* wrapper */
+.wrapper {
+	max-width:1500px;
+	/*width:95%;*/
+	margin:0 auto;
+	position:relative;
+	background-color:#ffffff;
+}
+/* header */
+.header {
+
+}
+/* logo */
+.logo {
+
+}
+.logo-img {
+
+}
+/* nav */
+.nav {
+
+}
+/* sidebar */
+.sidebar {
+
+}
+/* footer */
+.footer {
+
+}
+
+/*------------------------------------*\
+    PAGES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+    IMAGES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+	TYPOGRAPHY
+\*------------------------------------*/
+/*
+@font-face {
+	font-family:'Font-Name';
+	src:url('fonts/font-name.eot');
+	src:url('fonts/font-name.eot?#iefix') format('embedded-opentype'),
+		url('fonts/font-name.woff') format('woff'),
+		url('fonts/font-name.ttf') format('truetype'),
+		url('fonts/font-name.svg#font-name') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}*/
+
+@font-face {
+    font-family: 'flyerfontsregular';
+    src: url('fonts/flyerfonts-hardcore-webfont.eot');
+    src: url('fonts/flyerfonts-hardcore-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/flyerfonts-hardcore-webfont.woff2') format('woff2'),
+         url('fonts/flyerfonts-hardcore-webfont.woff') format('woff'),
+         url('fonts/flyerfonts-hardcore-webfont.ttf') format('truetype'),
+         url('fonts/flyerfonts-hardcore-webfont.svg#flyerfontsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*------------------------------------*\
+    RESPONSIVE
+\*------------------------------------*/
+
+@media only screen and (min-width:320px) {
+
+}
+@media only screen and (min-width:480px) {
+
+}
+@media only screen and (min-width:768px) {
+
+}
+@media only screen and (min-width:1024px) {
+
+}
+@media only screen and (min-width:1140px) {
+
+}
+@media only screen and (min-width:1200px) {
+
+}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+	   only screen and (min-resolution:144dpi) {
+
+}
+
+/*------------------------------------*\
+    MISC
+\*------------------------------------*/
+/*
+::selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-webkit-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-moz-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+*/
+/*------------------------------------*\
+    WORDPRESS CORE
+\*------------------------------------*/
+
+.alignnone {
+	margin:5px 20px 20px 0;
+}
+.aligncenter,
+div.aligncenter {
+	display:block;
+	margin:5px auto 5px auto;
+}
+.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+a img.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+a img.alignnone {
+	margin:5px 20px 20px 0;
+}
+a img.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+a img.aligncenter {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+.wp-caption {
+	background:#FFF;
+	border:1px solid #F0F0F0;
+	max-width:96%;
+	padding:5px 3px 10px;
+	text-align:center;
+}
+.wp-caption.alignnone {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignleft {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignright {
+	margin:5px 0 20px 20px;
+}
+.wp-caption img {
+	border:0 none;
+	height:auto;
+	margin:0;
+	max-width:98.5%;
+	padding:0;
+	width:auto;
+}
+.wp-caption .wp-caption-text,
+.gallery-caption {
+	font-size:11px;
+	line-height:17px;
+	margin:0;
+	padding:0 4px 5px;
+}
+.sticky {
+
+}
+.bypostauthor {
+
+}
+
+/*------------------------------------*\
+    PRINT
+\*------------------------------------*/
+
+@media print {
+	* {
+		background:transparent !important;
+		color:#000 !important;
+		box-shadow:none !important;
+		text-shadow:none !important;
+	}
+	a,
+	a:visited {
+		text-decoration:underline;
+	}
+	a[href]:after {
+		content:" (" attr(href) ")";
+	}
+	abbr[title]:after {
+		content:" (" attr(title) ")";
+	}
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content:"";
+	}
+	pre,blockquote {
+		border:1px solid #999;
+		page-break-inside:avoid;
+	}
+	thead {
+		display:table-header-group;
+	}
+	tr,img {
+		page-break-inside:avoid;
+	}
+	img {
+		max-width:100% !important;
+	}
+	@page {
+		margin:0.5cm;
+	}
+	p,
+	h2,
+	h3 {
+		orphans:3;
+		widows:3;
+	}
+	h2,
+	h3 {
+		page-break-after:avoid;
+	}
+}
+
+h1.main-title
+{
+	color: #006f43;  /*green*/
+	font-family:flyerfontsregular;
+	font-size: 4.333rem;
+	
+}
+h2.sub-title
+{
+	font-family: flyerfontsregular;
+	font-size: 2.333rem;
+	color: #006E42;
+	text-decoration: none;	
+}
+
+p,ul.green
+{
+	color: #006f43;  /*green*/
+}
+
+nav.navbar
+{
+	min-height:91px;
+}
+
+nav.navbar-default, nav.navbar-brand
+{
+	background-color:transparent;
+}
+nav.navbar-default .navbar-brand
+{
+	color:white;
+	font-size: 1.833rem;
+}
+nav.navbar-default .navbar-nav>li>a
+{
+	color:white;
+	font-size: 1.833rem;
+    text-transform: uppercase;
+	padding-top:43px;
+	font-weight: bold;
+}
+nav.navbar-default .navbar-nav>li>a:hover, 
+nav.navbar-default .navbar-nav>li>a:focus
+{
+	color:white;
+	background-image:url('img/sf-main-nav-indicator.png');
+	background-repeat: no-repeat;
+	background-position: center top;
+	/**/
+}
+nav.navbar-default .navbar-nav>.open>a, 
+nav.navbar-default .navbar-nav>.open>a:hover, 
+nav.navbar-default .navbar-nav>.open>a:focus
+{
+	color:white;
+	background-color:transparent;	
+}
+nav.navbar-default .navbar-nav>.active>a,
+nav.navbar-default .navbar-nav>.active>a:hover
+{
+	color:white; 
+	background-color:transparent;
+	background-image:url('img/sf-main-nav-indicator.png');
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+nav.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover, 
+nav.navbar-default .navbar-nav .open .dropdown-menu>li>a:focus
+{
+	color:white;
+	text-align:center;
+	
+}
+nav.navbar-default .navbar-nav .open .dropdown-menu>li>a,
+nav.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover
+{
+	/*color:white;*/
+	text-align:center;
+	
+}
+.navbar-nav>li>.dropdown-menu 
+{
+	border-radius:0;
+}
+
+.navbar-nav>li>.dropdown-menu > li
+{
+	background-image: url('img/underline_01.png');
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}
+
+.navbar-nav>li>.dropdown-menu > li.last-menu-item
+{
+	background-image: none;
+	
+}
+.secondary-nav-menu
+{ 
+	list-style: none;
+}
+.secondary-nav-menu li
+{
+	list-style: none;
+	display:block;
+	float:left;
+	border-right: 1px solid #ffffff;
+	padding-left:10px;
+	padding-right:10px;
+}
+.secondary-nav-menu li.wpmenucartli
+{
+	border-right: none;
+}
+.secondary-nav-menu li a
+{
+	color:#ffffff;
+}
+.secondary-nav-menu li a:hover
+{
+	color:#ffffff;
+	text-decoration:none;
+}
+.secondary-menu
+{
+	/*background-color: lightblue;*/
+}
+ .div-spacer
+ {
+	background-color:#e5e4da;
+ }
+ .front-page-title
+ {
+	text-align:center;
+	font-family:flyerfontsregular;
+	font-size: 2.333rem;
+	color: #006E42;
+	margin-bottom: 20px;
+ }
+ .row.table-row>div.front-page-left-column
+ {
+	background-color: #006f43;
+	color: #ffffff;
+	text-align:center;
+	vertical-align:middle;
+	height:100%;
+	font-family:flyerfontsregular;
+	font-size: 3rem;
+	padding:75px;
+ }
+  .container.table-container
+ {
+	width: 100%;
+ }
+ 
+div.site-logo img
+{
+	max-height: 30px;
+	margin: 35px 0px 35px 0;
+	max-width: 75%;
+	padding-left: 20px;
+}
+
+button.navbar-toggle
+{
+	margin-top:28px;
+	background-color: #ddd;
+}
+
+ul.navbar-nav
+{
+	background-color: #006f43;
+	text-align: center;
+}
+
+@media (min-width: 768px) 
+{
+	body 
+	{
+		font:300 10px/1.4 "Trebuchet MS", Helvetica, sans-serif;
+	}
+	ul.navbar-nav
+	{
+		background-color: transparent;		
+	}
+	
+}
+@media (min-width: 992px) {
+
+	div.site-logo img
+	{
+		max-height: 20px;
+		margin: 35px 0px 35px 0;
+		max-width:none;
+	}
+	
+	
+	.height-test
+	{
+		height: calc(100%-71px);
+	}
+	.navbar-nav .caret 
+	{
+		display:none;
+	}
+
+	.dropdown:hover .dropdown-menu 
+	{
+		display: block;
+	}
+	 
+
+	.container.table-container
+	{
+		padding-left: 0;
+		padding-right: 0;
+		margin-left:0;
+		margin-right:0;
+	}
+
+	.row.table-row 
+	{
+		display:table;
+		width:100%;
+		margin:0 auto;
+	}
+
+	.row.table-row > [class*="col-"] 
+	{
+		float:none;
+		display:table-cell;
+		vertical-align:top;
+	}
+  
+}
+@media (min-width: 1200px) 
+{
+	body 
+	{
+		font:300 12px/1.4 "Trebuchet MS", Helvetica, sans-serif;
+	}
+	div.site-logo img
+	{
+		max-height: 30px;
+		margin: 30px 28px 30px 0;
+		max-width:none;
+	}
+	
+	.slideshow-wrapper				
+	{
+		width:1200px;
+	}
+	
+	
+}
+@media (min-width: 1500px) 
+{
+	
+	.slideshow-wrapper				
+	{
+		width:1500px;
+	}
+	.container
+	{
+		width:1470px;
+	}
+}
+div.icon-sprite 
+{
+	display: inline-block;
+	height: 55px;
+	width: 55px;
+	background-position: 0px 0px;
+	background-size: 165px 55px;
+} 
+.icon-link
+{
+	font-weight:bold;
+	color: #006E42;
+	font-size:1.333rem
+	
+}
+.icon-link:hover,.icon-link:visited,.icon-link:link
+{
+	text-decoration:none;
+	color: #006E42;
+}
+.icon-link:hover div.icon-sprite 
+{
+	background-position: -55px 0px;
+}
+.icon-link:active div.icon-sprite,
+.icon-link.active div.icon-sprite 
+{
+	background-position: -110px 0px;
+}
+
+.tab-pills ul
+{
+	padding-bottom:15px;
+}
+
+.tab-pills ul.nav li a
+{
+	border: #C9C7BE 1px solid;
+	border-radius: 4px;
+	font-size: 1.6rem;
+}
+
+.tab-pills ul.tab-content
+{
+	padding-left:0px;
+}
+
+/* Sub Menu Styles for product pills*/
+.centered-pills 
+{  
+	text-align: center;
+	margin-top:100px;
+	text-transform: uppercase;
+	position:absolute;
+	width:100%;
+}
+.centered-pills ul.nav-pills 
+{
+	display: inline-block
+}
+.centered-pills li 
+{
+	display: inline;
+	margin-bottom:10px;
+}
+.centered-pills a 
+{
+	float: left
+}
+* html .centered-pills ul.nav-pills, *+html .centered-pills ul.nav-pills 
+{
+	display: inline
+}
+.centered-pills .nav-pills>li>a					
+{
+	padding: 0px 15px;
+	margin: 0px 5px;
+	border-radius: 2px;
+	text-decoration: none;
+	background-color: #ffffff;
+	color: #006E42;
+	font-weight: bold;
+	font-size: 1.467rem;
+}
+.centered-pills .nav-pills li.current-menu-item>a,
+.centered-pills .nav-pills>li>a:hover				
+{
+	color: #ffffff;
+	background-color: #006E42;
+}
+.osc-res-tab
+{
+	text-transform: uppercase;	
+	margin-top:15px;
+}
+.osc-res-nav > li
+{
+	margin-right:10px;
+}
+
+
+/*Frontpage slideshow*/
+.catapult-slideshow
+{
+	/*background-color:pink;*/
+	width:100%;
+	/*position:absolute;*/
+	position:relative;
+}
+.catapult-slideshow-wrapper
+{
+	margin:0;
+	padding:0;
+	position:relative;
+	overflow:hidden;
+}
+.catapult-slide
+{
+	margin:0;
+	padding:0;
+	float:left;
+	position:relative;
+	overflow: hidden;
+}
+.catapult-slide img
+{
+	width: 100%;
+	min-width:659px;
+	max-width:1500px;
+	float:right;
+}		
+
+.catapult-slideshow-indicators
+{
+	list-style: none;
+}		
+.catapult-slideshow-indicators li
+{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin: 1px;
+	text-indent: -999px;
+	cursor: pointer;
+	background-color: #000 \9;
+	background-color: rgba(0,0,0,0);
+	border: 1px solid #fff;
+	border-radius: 10px;
+}			
+.catapult-slideshow-indicators li.active 
+{
+	width: 12px;
+	height: 12px;
+	margin: 0;
+	background-color: #fff;
+}			
+.catapult-slideshow-text a							
+{
+	background-color:#FFFFFF;
+	padding:5px 15px; 
+	border-radius: 2px;
+	box-shadow: 2px 2px 8px #000000;
+	text-decoration:none;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	color: #006E42;
+	font-weight:bold;
+	font-size: 1.167rem;
+}
+.catapult-slideshow-text h1							
+{
+	font-family:flyerfontsregular;
+	text-shadow: 2px 2px 8px #000000;
+	text-transform: uppercase;
+	font-size: 3rem;
+}
+.catapult-slideshow-text a							
+{
+	text-transform: uppercase;
+}
+
+
+/*Product discription*/
+
+article.type-product_description
+{
+	color:#006E42;
+	font-size: 1.333rem;
+}
+
+.product-background img
+{
+	width: 100%;
+	min-width:659px;
+	max-width:1500px;
+	float:right;
+}
+
+/*Page*/
+
+.page-background img
+{
+	width: 100%;
+	min-width:659px;
+	max-width:1500px;
+	float:right;
+}
+
+.front-page-right-column article
+{
+	text-align:center;
+	padding: 0 30px;
+	color: #006E42;
+	font-size: 1.083rem
+}
+.front-page-right-column h2 a
+{
+	font-family:flyerfontsregular;
+	font-size: 30px;
+	color: #006E42;
+	text-decoration:none;
+}
+.view-article
+{
+	background-color: #EE3524;
+	border-radius:2px;
+	text-decoration:none;
+	color: #ffffff;
+	padding:10px;							
+}
+.view-article:hover,
+.view-article:focus
+{
+	text-decoration:none;
+	color: #ffffff;
+	padding:10px;
+	:bold;
+}
+
+.tab-content .tab-pane
+{
+	font-size: 1rem;
+}
+.wpcf7-submit
+{
+	background-color:#EE3524; 
+	border-radius: 2px; 
+	padding-top: 7px; 
+	padding-bottom: 7px; 
+	padding-left:20px; 
+	padding-right:20px; 
+	color:#ffffff; 
+	font-size: 2rem;
+	margin-top: 10px;
+	border: 1px solid transparent;
+}
+
+.modal-dialog
+{
+  transform: translate(0, 50%) !important;
+  -ms-transform: translate(0, 50%) !important; /* IE 9 */
+  -webkit-transform: translate(0, 50%) !important; /* Safari and Chrome */
+}
+.modal-dialog .btn.btn-primary
+{
+	background-color: #ffffff;
+	color: #333;
+	border-color: #ccc;
+	outline: none;
+}
+.modal-dialog .btn.btn-primary:hover
+{
+	background-color: #EE3524;	
+	color: #ffffff;
+	border-color: #ffffff;
+}
+ul.wpsc_categories
+{
+	font-size: 2rem;
+	line-height: 2rem;
+	font-family:flyerfontsregular;
+	color: #006E42;
+	list-style:none;
+	padding-left:0;	
+	margin-top: 30px;
+	margin-left: 30px;
+}
+
+ul.wpsc_categories li a 
+{
+	color: #006E42;
+	text-decoration: none;
+}
+ul.wpsc_categories li a :hover
+{
+	text-decoration: none;
+}
+
+div#grid_view_products_page_container,
+#content div#grid_view_products_page_container,
+#content div#list_view_products_page_container 
+{
+	width:100%;
+}
+.product_grid_display .product_grid_item
+{
+	border-radius:5px;
+}
+
+.overlay
+{
+	position:absolute; 
+	width:100%; 
+	height:30%;
+	bottom:0;
+	background-color: #006E42;
+	/*background-color:rgb(0,0,0); 
+	background-color:rgba(0,0,0,0.5); */
+	opacity:0;
+	color: #ffffff;
+	/*font-family: Arial, Helvetica, sans-serif;*/
+	
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;	
+	
+	overflow:hidden; 
+	font-size:1.7rem;
+	/*font-family:flyerfontsregular;*/
+	padding-top:7px;
+	text-align:center;
+	
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.overlay a,
+.overlay a:hover
+{
+	color:#ffffff;
+	opacity:1;
+	text-decoration:none;
+	font-size: 18px;
+	padding:20px;
+}
+
+ .quickview-modal .modal-header
+{
+	padding-bottom:0px;
+	border-bottom:none;
+}
+ .quickview-modal .modal-title
+{
+	font-size:2.5rem;
+	color: #006E42; /*Green*/
+	font-family:flyerfontsregular;
+	text-transform:uppercase;
+	text-align:center;
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 10px;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+.quickview-title-product-name
+{
+	color: #EE3524; /*Red*/
+}
+.product-generic-title
+{
+	font-family:flyerfontsregular;
+	text-transform:uppercase;
+	font-size: 2.5rem;
+	color: #006E42; /*Green*/
+	padding-top:15px;
+	padding-bottom:15px;
+	margin-bottom:15px;
+}
+.sensible-product-title
+{
+	font-family:flyerfontsregular;
+	text-transform:uppercase;
+	font-size: 4rem;
+	color: #EE3524; /*Red*/
+}
+.sensible-product-description
+{
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	text-transform:uppercase ;
+	font-size: 1.333rem ;
+	color: #006E42; /*Green*/
+}
+
+.sensible-price-product
+{
+	font-family:flyerfontsregular;
+	text-transform:uppercase;
+	font-size: 2rem;
+	line-height: 2rem;
+	color: #006E42; /*Green*/
+	margin-bottom:20px;
+}
+.sensible-price-product .wpsc-product-price
+{
+	font-size: 4rem;
+	line-height: 4rem;	
+}
+.sensible-price-product p
+{
+	margin:0;
+}
+.wpsc_quantity_update label.wpsc_quantity_update
+{
+	font-family:flyerfontsregular;
+	text-transform:uppercase;
+	color: #006E42; /*Green*/
+	font-size: 2rem;
+}
+div.wpsc_quantity_update input.sensible-quantity
+{	
+	font-family:flyerfontsregular;
+	color: #006E42; /*Green*/
+	font-size: 2.5rem;
+}
+.sensible-buy-button-container
+{
+	margin-top:15px;
+	text-align:left;
+}
+
+div.sensible-buy-button-container input.wpsc_buy_button
+{
+	background-color:#EE3524; 
+	border-radius: 2px; 
+	padding:15px 20px; 
+	color:#ffffff; 
+	font-size:2.5rem;
+	border:none;
+	text-transform:uppercase;
+}
+
+div.product_grid_display .product_grid_item
+{
+	-moz-box-shadow: 0px 0px 1px rgba(160,160,160,1);
+	-webkit-box-shadow: 0px 0px 1px rgba(160,160,160,1);
+        box-shadow: 0px 0px 1px rgba(160,160,160,1);
+        background-color: #f9f9f6;
+	/*border-bottom-style: solid;
+	border-width: 1px;
+	border-color:gray;*/
+}
+.product_grid_display h2.prodtitle a:link, #content .product_grid_display h2.prodtitle a:link, .product_grid_display h2.prodtitle a:visited, #content .product_grid_display h2.prodtitle a:visited {
+	color: #006E42 !important; 
+}
+
+.product_grid_display .product_grid_item img.product_image
+{
+	background-color: transparent !important;
+}
+
+.wpsc_checkout_table td
+{
+	padding: 3px 0;
+}
+
+.wpsc-country-dropdown
+{
+	line-height: 1.2em;
+	font-size: 14px;
+	margin: 0;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	margin-right:5px;
+}
