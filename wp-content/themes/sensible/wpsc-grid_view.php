@@ -39,6 +39,23 @@ $image_height = get_option('product_image_height');
 			<div class="col-md-4 overlay">
 				<a class="quickview-overlay" href="#" 
 					data-title="<?php echo wpsc_the_product_title(); ?>" 
+					data-variation-groups='<?PHP 
+						$variationGroups = array();
+						while(wpsc_have_variation_groups()){
+							wpsc_the_variation_group();
+							$variationGroup = array('variationGroupId'=>wpsc_vargrp_id(), 'variationGroupFormId'=>wpsc_vargrp_form_id(),'variationGroupName'=>wpsc_the_vargrp_name());
+							$variations = array();
+							while (wpsc_have_variations()){
+								wpsc_the_variation();
+								$variation = array('variationId'=>wpsc_the_variation_id(),'variationOutOfStock'=>wpsc_the_variation_out_of_stock(),'variationName'=>wpsc_the_variation_name());
+								array_push($variations,$variation);																
+							}
+							$variationGroup['variations'] = $variations;
+							array_push($variationGroups,$variationGroup);							
+						}					
+						echo json_encode($variationGroups);	
+					?>'
+					
 					data-description="<?php //echo wpsc_the_product_description(); ?>"
 					data-image="<?php echo wpsc_the_product_thumbnail(200); ?>"
 					data-product-id="<?php echo wpsc_the_product_id(); ?>"
@@ -49,7 +66,8 @@ $image_height = get_option('product_image_height');
 					data-price = "<?PHP echo wpsc_the_product_price(); ?>"
 					><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a><br/>
 				<a class="quickview-overlay" href="#" 
-					data-title="<?php echo wpsc_the_product_title(); ?>" 
+					data-title="<?php echo wpsc_the_product_title(); ?>"
+					data-variation-groups='<?PHP echo json_encode($variationGroups); ?>'
 					data-description="<?php //echo wpsc_the_product_description(); ?>"
 					data-image="<?php echo wpsc_the_product_thumbnail(200); ?>" 
 					data-product-id="<?php echo wpsc_the_product_id(); ?>"
@@ -203,6 +221,18 @@ $image_height = get_option('product_image_height');
 				});	
 				
 				$('.quickview-overlay').click(function(event){
+					var $groups = $('<div></div>',{'class':'wpsc_variation_forms'});
+					var variationGroups = JSON.parse($(this).attr('data-variation-groups'));
+					$.each(variationGroups,function(index,variationGroup){
+						var $group = $('<div></div>',{'class':'validation-group'}).append($('<label></label>',{'for':variationGroup.variationGroupFormId}).append(variationGroup.variationGroupName));
+						var $select = $('<select></select>',{'class':'wpsc_select_variation', 'name':'variation['+variationGroup.variationGroupId+']','id':variationGroup.variationGroupFormId});
+						$.each(variationGroup.variations,function(index2,variation){
+							$select.append($('<option></option>',{'value':variation.variationId}).append(variation.variationName));
+						});
+						$group.append($select); 
+						$groups.append($group);
+					});
+					//$variation = array('variationId'=>wpsc_the_variation_id(),'variationOutOfStock'=>wpsc_the_variation_out_of_stock(),'variationName'=>wpsc_the_variation_name());
 					event.preventDefault();bootbox.dialog({
 						  className: "quickview-modal",
 						  title: "<span class='quickview-title-product-name'>"+$(this).attr('data-title')+"</span> Crunch Dried Fruit",
@@ -210,7 +240,7 @@ $image_height = get_option('product_image_height');
 						  "<div class='col-md-6'><div style='text-align:left'>"+
 						  $(this).attr('data-description')+ '<br>' +$(this).attr('data-price') +
 						  '<form class="product_form"  enctype="multipart/form-data" action="'+$(this).attr('data-this-url')+'" method="post" name="product_'+$(this).attr('data-product-id')+'" id="product_'+$(this).attr('data-product-id')+'" onSubmit="return Ajaxion(this);">' +
-						  '<input type="hidden" value="'+$(this).attr('data-product-id')+'" name="product_id"/>'+
+						  '<input type="hidden" value="'+$(this).attr('data-product-id')+'" name="product_id"/>'+ $groups.html() +
 						  '<div class="quantity_container">'+
 							'<label class="wpsc_quantity_update" for="wpsc_quantity_update_'+$(this).attr('data-product-id')+'">Quantity: </label>'+
 							'<input type="text" id="wpsc_quantity_update_'+$(this).attr('data-product-id')+'" name="wpsc_quantity_update" size="2" value="1" />'+

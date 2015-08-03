@@ -6,11 +6,20 @@
 		<!-- section -->
 		<section>
 			<div class="container table-container">
-				<div class="row table-row">	
-					<div class="col-md-6 front-page-left-column">
+				<div class="row table-row green-background">	
+					<div class="col-md-4 front-page-left-column">
 						At Sensible Foods, we bring you <br>100% real fruit and vegetable snacks that deliver perfectly delicious, crunch dried taste from nature.
+						<br/>
+						<a class="btn btn-primary" style="background-color:#EE3524;border-color:#EE3524; font-size:1.75rem;" href="http://sensiblefoods.danielvalenzuela.com.mx/sensible-foods/">LEARN MORE</a>
 					</div>
-					<div class="col-md-6 front-page-right-column" style="padding:0;">
+					<div class="col-md-4 front-page-left-column">
+						20 Pack Variety Pack Now Available at all Sam's Clubs.
+						<br/>
+						<img style="padding:0 100px;" src="<?php echo get_template_directory_uri(); ?>/img/frontpage-box.png" alt="">
+						<br/>
+						<a class="btn btn-primary" style="background-color:#EE3524;border-color:#EE3524; font-size:1.75rem;" href="http://sensiblefoods.danielvalenzuela.com.mx/find-us/">FIND THE NEAREST SAM'S CLUB</a>
+					</div>
+					<div class="col-md-4 front-page-right-column" style="padding:0;">
 						<?php //get_template_part('loop'); ?>
 						
 						<?php if (have_posts()): if (have_posts()) : the_post(); ?>

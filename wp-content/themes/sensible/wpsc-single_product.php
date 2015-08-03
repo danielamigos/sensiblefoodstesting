@@ -288,7 +288,7 @@
 
                         <?php if (wpsc_have_variation_groups()) { ?>
 
-                        <fieldset><legend><?php _e('Product Options', 'wpsc'); ?></legend>
+                        <fieldset><legend class="wpsc_variation_forms"><?php _e('Product Options', 'wpsc'); ?></legend>
 
 						<div class="wpsc_variation_forms">
 
