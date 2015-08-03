@@ -15,7 +15,7 @@
 					<div class="col-md-4 front-page-left-column">
 						20 Pack Variety Pack Now Available at all Sam's Clubs.
 						<br/>
-						<img style="padding:0 100px;" src="<?php echo get_template_directory_uri(); ?>/img/frontpage-box.png" alt="">
+						<img style="width:200px;" src="<?php echo get_template_directory_uri(); ?>/img/frontpage-box.png" alt=""> 
 						<br/>
 						<a class="btn btn-primary" style="background-color:#EE3524;border-color:#EE3524; font-size:1.75rem;" href="http://sensiblefoods.danielvalenzuela.com.mx/find-us/">FIND THE NEAREST SAM'S CLUB</a>
 					</div>
