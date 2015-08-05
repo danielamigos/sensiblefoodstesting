@@ -24,7 +24,7 @@ $image_height = get_option('product_image_height');
 	<?php if(wpsc_display_products()) { ?>
 				
 
-		<div class="product_grid_display group" style="margin-left:40px;">
+		<div class="product_grid_display group">
 		
 		<?php if(wpsc_has_pages_top()) { ?>
 				<div class="wpsc_page_numbers_top group">
