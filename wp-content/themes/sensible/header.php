@@ -340,7 +340,7 @@
 						</div>
 						<div class="col-md-4" style="text-align:center;margin: 5px 0;">
 							<a href="http://sensiblefoods.danielvalenzuela.com.mx/recipes/" class="icon-link"  style="line-height: 60px;">
-								<div class="icon-sprite" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/sf-icon-deal.png); vertical-align:middle; margin-right:15px;"></div>
+								<div class="icon-sprite" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/sf-icon-recipes.png); vertical-align:middle; margin-right:15px;"></div>
 								Recipes
 							</a>
 						</div>

@@ -80,7 +80,7 @@ $image_height = get_option('product_image_height');
 				<?php if(wpsc_the_product_thumbnail()) { ?>
 					<div class="item_image" style="margin-top:20px; margin-bottom:15px;">
 						<a href="<?php echo wpsc_the_product_permalink(); ?>">
-						<img style="height:148px" class="product_image" id="product_image_<?php echo wpsc_the_product_id(); ?>" alt="<?php echo wpsc_the_product_title(); ?>" src="<?php echo wpsc_the_product_thumbnail(0,148); ?>" />
+						<img style="height:300px" class="product_image" id="product_image_<?php echo wpsc_the_product_id(); ?>" alt="<?php echo wpsc_the_product_title(); ?>" src="<?php echo wpsc_the_product_thumbnail(0,300); ?>" />
 						</a>
 					</div><!--close imte_image-->
 				<?php } else { ?>
