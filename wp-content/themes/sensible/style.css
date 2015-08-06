@@ -673,12 +673,13 @@ h2.sub-title
 }
 
 
-
+.tab-pills ul,
 p,ul.green
 
 {
 
 	color: #006f43;  /*green*/
+	font-size: 1.5rem;
 
 }
 
@@ -715,17 +716,13 @@ nav.navbar-default .navbar-brand
 nav.navbar-default .navbar-nav>li>a
 
 {
-
 	color:white;
-
 	font-size: 1.833rem;
-
     text-transform: uppercase;
-
 	padding-top:43px;
-
 	font-weight: bold;
-
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 nav.navbar-default .navbar-nav>li>a:hover, 
@@ -900,6 +897,16 @@ nav.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover
 
 }
 
+.social-icons
+{
+	position:absolute; 
+	z-index:1001; 
+	right:0; 
+	margin-right: px;
+	margin-right: 65px;
+    margin-top: 30px;
+}
+
  .div-spacer
 
  {
@@ -1025,11 +1032,15 @@ ul.navbar-nav
 		background-color: transparent;		
 
 	}
+	.social-icons
+	{
+		margin-right:20px;
+		margin-top:35px;
+	}
 
 	
 
 }
-
 @media (min-width: 992px) {
 
 
