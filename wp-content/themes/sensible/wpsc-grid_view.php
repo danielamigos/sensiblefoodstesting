@@ -31,7 +31,7 @@ $image_height = get_option('product_image_height');
 					<?php wpsc_pagination(); ?>
 				</div><!--close wpsc_page_numbers_top-->
 		<?php } ?>
-		<div class="row">
+		<div class="row" style="padding-right:15px;">
 		<?php while (wpsc_have_products()) { wpsc_the_product(); ?>
 			<div class="col-md-4" style="">
 			<div class="product_grid_item product_view_<?php echo wpsc_the_product_id(); ?>" style="width:100%;">
@@ -80,7 +80,7 @@ $image_height = get_option('product_image_height');
 				<?php if(wpsc_the_product_thumbnail()) { ?>
 					<div class="item_image" style="margin-top:20px; margin-bottom:15px;">
 						<a href="<?php echo wpsc_the_product_permalink(); ?>">
-						<img style="height:300px" class="product_image" id="product_image_<?php echo wpsc_the_product_id(); ?>" alt="<?php echo wpsc_the_product_title(); ?>" src="<?php echo wpsc_the_product_thumbnail(0,300); ?>" />
+						<img style="max-height:300px" class="product_image" id="product_image_<?php echo wpsc_the_product_id(); ?>" alt="<?php echo wpsc_the_product_title(); ?>" src="<?php echo wpsc_the_product_thumbnail(0,300); ?>" />
 						</a>
 					</div><!--close imte_image-->
 				<?php } else { ?>
