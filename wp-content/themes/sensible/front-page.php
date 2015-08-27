@@ -10,14 +10,14 @@
 					<div class="col-md-4 front-page-left-column">
 						At Sensible Foods, we bring you <br>100% real fruit and vegetable snacks that deliver perfectly delicious, crunch dried taste from nature.
 						<br/>
-						<a class="btn btn-primary" style="background-color:#EE3524;border-color:#EE3524; font-size:1.75rem;font-family:'Trebuchet MS', Helvetica, sans-serif;" href="http://sensiblefoods.danielvalenzuela.com.mx/sensible-foods/">LEARN MORE</a>
+						<a class="btn btn-primary" style="background-color:#EE3524;border-color:#EE3524; font-size:1.75rem;font-family:'Trebuchet MS', Helvetica, sans-serif;" href="/sensible-foods/">LEARN MORE</a>
 					</div>
 					<div class="col-md-4 front-page-left-column">
 						20 Pack Variety (Fuji, Cherry, Tropical) Pack Now Available at all Sam's Clubs.
 						<br/>
 						<img style="width:200px;" src="<?php echo get_template_directory_uri(); ?>/img/frontpage-box.png" alt=""> 
 						<br/>
-						<a class="btn btn-primary" style="background-color:#EE3524;border-color:#EE3524; font-size:1.75rem;font-family:'Trebuchet MS', Helvetica, sans-serif;" href="http://sensiblefoods.danielvalenzuela.com.mx/find-us/">FIND THE NEAREST SAM'S CLUB</a>
+						<a class="btn btn-primary" style="background-color:#EE3524;border-color:#EE3524; font-size:1.75rem;font-family:'Trebuchet MS', Helvetica, sans-serif;" href="/find-us/">FIND THE NEAREST SAM'S CLUB</a>
 					</div>
 					<div class="col-md-4 front-page-right-column" style="padding:0;">
 						<?php //get_template_part('loop'); ?>

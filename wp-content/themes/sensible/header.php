@@ -338,19 +338,19 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-4" style="text-align:center;margin: 5px 0;">
-							<a href="http://sensiblefoods.danielvalenzuela.com.mx/shop/" target="_blank" class="icon-link" style="line-height: 60px;">
+							<a href="/shop/" target="_blank" class="icon-link" style="line-height: 60px;">
 								<div class="icon-sprite" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/sf-icon-shop.png); vertical-align:middle; margin-right:15px;"></div>
 								SHOP ONLINE
 							</a>
 						</div>
 						<div class="col-md-4" style="text-align:center;margin: 5px 0;">
-							<a href="http://sensiblefoods.danielvalenzuela.com.mx/recipes/" class="icon-link"  style="line-height: 60px;">
+							<a href="/recipes/" class="icon-link"  style="line-height: 60px;">
 								<div class="icon-sprite" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/sf-icon-recipes.png); vertical-align:middle; margin-right:15px;"></div>
 								Recipes
 							</a>
 						</div>
 						<div class="col-md-4" style="text-align:center;margin: 5px 0;">
-							<a href="http://sensiblefoods.danielvalenzuela.com.mx/contact/" class="icon-link"  style="line-height: 60px;">
+							<a href="/press/" class="icon-link"  style="line-height: 60px;">
 								<div class="icon-sprite" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/sf-icon-newsletter.png); vertical-align:middle; margin-right:15px;"></div>
 								Testimonials
 							</a>

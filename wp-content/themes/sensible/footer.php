@@ -6,7 +6,7 @@
 				<!-- copyright -->
 				<p class="copyright" style="text-align:center">
 					<!--&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.-->
-					Privacy Policy | Shipping Policies | Site Map | Press | <a href="http://sensiblefoods.danielvalenzuela.com.mx/contact/">Contact</a>
+					Privacy Policy | Shipping Policies | Site Map | <a style="color: #006f43;" href="/press/">Press</a> | <a style="color: #006f43;" href="/contact/">Contact</a>
 				</p>
 				<!-- /copyright -->
 
