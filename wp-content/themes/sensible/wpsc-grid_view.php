@@ -75,7 +75,7 @@ $image_height = get_option('product_image_height');
 					data-has-stock = "<?php echo wpsc_product_has_stock(); ?>"
 					data-cart-id-key = "<?php echo wpsc_the_cart_item_key(); ?>"
 					data-loading-url = "<?php echo wpsc_loading_animation_url(); ?>"
-					data-price = "<?PHP echo wpsc_the_product_price(); ?>" >Quickview</a>
+					data-price = "<?PHP echo wpsc_the_product_price(); ?>" >Add to Cart</a>
 			</div>
 				<?php if(wpsc_the_product_thumbnail()) { ?>
 					<div class="item_image" style="margin-top:20px; margin-bottom:15px;">
