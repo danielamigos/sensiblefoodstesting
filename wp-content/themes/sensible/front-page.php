@@ -8,59 +8,48 @@
 			<div class="container table-container">
 				<div class="row table-row green-background">	
 					<div class="col-md-4 front-page-left-column">
-						At Sensible Foods, we bring you <br>100% real fruit and vegetable snacks that deliver perfectly delicious, crunch dried taste from nature.
-						<br/>
-						<a class="btn btn-primary" style="background-color:#EE3524;border-color:#EE3524; font-size:1.75rem;font-family:'Trebuchet MS', Helvetica, sans-serif;" href="/sensible-foods/">LEARN MORE</a>
+						<?PHP
+							$frontpage_column_1_title = get_field('frontpage_column_1_title','option');
+							$frontpage_column_1_content = get_field('frontpage_column_1_content','option');
+							$frontpage_column_1_button = get_field('frontpage_column_1_button_text','option');
+							$frontpage_column_1_url = get_field('frontpage_column_1_button_url','option');
+						?>
+						<h2><?PHP echo $frontpage_column_1_title;?></h2>
+						<?PHP echo $frontpage_column_1_content; ?>
+						<?PHP if($frontpage_column_1_button != "" && $frontpage_column_1_url != ""): ?>
+							<a class="btn btn-danger frontpage-column-button" href="<?PHP echo $frontpage_column_1_url; ?>"><?PHP echo $frontpage_column_1_button; ?></a>
+						<?PHP endif; ?>
 					</div>
 					<div class="col-md-4 front-page-left-column">
-						20 Pack Variety (Fuji, Cherry, Tropical) Pack Now Available at all Sam's Clubs.
-						<br/>
-						<img style="width:200px;" src="<?php echo get_template_directory_uri(); ?>/img/frontpage-box.png" alt=""> 
-						<br/>
-						<a class="btn btn-primary" style="background-color:#EE3524;border-color:#EE3524; font-size:1.75rem;font-family:'Trebuchet MS', Helvetica, sans-serif;" href="/find-us/">FIND THE NEAREST SAM'S CLUB</a>
-					</div>
-					<div class="col-md-4 front-page-right-column" style="padding:0;">
-						<?php //get_template_part('loop'); ?>
 						
-						<?php if (have_posts()): if (have_posts()) : the_post(); ?>
-
-							<!--<h1 class="front-page-title">Latest News | <?php the_time('m.j'); ?></h1>
-							<div class="green-dots">&nbsp;</div>-->
-							<!-- article -->
-							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-								<h1 class="front-page-title"><?php the_title(); ?></h1>
-								<!-- post title
-								<h2>
-									<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-								</h2>
-								<!-- /post title -->
-
-								<!-- post details -->
-								<?php the_content(); // Build your custom callback length in functions.php ?>
-								<!-- /post details -->
-								
-
-								<?php edit_post_link(); ?>
-
-							</article>
-							<!-- /article -->
-
-						<?php endif; ?>
-
-						<?php else: ?>
-
-							<!-- article -->
-							<article>
-								<h2>No news is good news</h2>
-							</article>
-							<!-- /article -->
-
-						<?php endif; ?>
-
-						<?php get_template_part('pagination'); ?>
+						<?PHP
+							$frontpage_column_2_title = get_field('frontpage_column_2_title','option');
+							$frontpage_column_2_content = get_field('frontpage_column_2_content','option');
+							$frontpage_column_2_button = get_field('frontpage_column_2_button_text','option');
+							$frontpage_column_2_url = get_field('frontpage_column_2_button_url','option');
+						?>
+						<h2><?PHP echo $frontpage_column_2_title;?></h2>
+						<?PHP echo $frontpage_column_2_content; ?>
+						<?PHP if($frontpage_column_2_button != "" && $frontpage_column_2_url != ""): ?>
+							<a class="btn btn-danger frontpage-column-button" href="<?PHP echo $frontpage_column_2_url; ?>"><?PHP echo $frontpage_column_2_button; ?></a>
+						<?PHP endif; ?>
+					</div>
+					<div class="col-md-4 front-page-right-column">
+						<?PHP
+							$frontpage_column_3_title = get_field('frontpage_column_3_title','option');
+							$frontpage_column_3_content = get_field('frontpage_column_3_content','option');
+							$frontpage_column_3_button = get_field('frontpage_column_3_button_text','option');
+							$frontpage_column_3_url = get_field('frontpage_column_3_button_url','option');
+						?>
+						<h2><?PHP echo $frontpage_column_3_title;?></h2>
+						<?PHP echo $frontpage_column_3_content; ?>
+						<?PHP if($frontpage_column_3_button != "" && $frontpage_column_3_url != ""): ?>
+							<a class="btn btn-danger frontpage-column-button" href="<?PHP echo $frontpage_column_3_url; ?>"><?PHP echo $frontpage_column_3_button; ?></a>
+						<?PHP endif; ?>
 					</div>
 				</div>
+				
+				
 			</div>
 		</section>
 		<!-- /section -->

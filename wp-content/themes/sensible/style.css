@@ -396,14 +396,14 @@ nav.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover,
 nav.navbar-default .navbar-nav .open .dropdown-menu>li>a:focus
 {
 	color:white;
-	text-align:center;
+	text-align:left;
 	
 }
 nav.navbar-default .navbar-nav .open .dropdown-menu>li>a,
 nav.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover
 {
 	/*color:white;*/
-	text-align:center;
+	text-align:left;
 	
 }
 .navbar-nav>li>.dropdown-menu 
@@ -496,6 +496,41 @@ nav.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover
 	border-right-style: solid;
 	border-right-width: 2px;
 	border-right-color: #ffffff;
+	 text-transform: uppercase;
+ }
+ .front-page-right-column
+ {
+	background-color: #006f43;
+	color: #ffffff;
+	text-align:center;
+	vertical-align:top;
+	height:100%;
+	font-family:flyerfontsregular;
+	font-size: 3rem;
+	padding:15px;
+	 text-transform: uppercase;
+ }
+ 
+ .front-page-left-column h2,
+ .front-page-right-column h2{
+	 text-transform: uppercase;
+	font-size: 3rem;	 
+	color: #ffffff;
+	margin-top:0;
+ }
+ .front-page-left-column p,
+ .front-page-right-column p{	
+	 text-transform: uppercase; 
+	font-size: 3rem;	 
+	color: #ffffff;
+ }
+ .frontpage-column-button
+ {
+	 text-transform: uppercase;
+	 background-color:#EE3524;
+	 border-color:#EE3524; 
+	 font-size:1.75rem;
+	 font-family:'Trebuchet MS', Helvetica, sans-serif;
  }
 
   .container.table-container
@@ -631,8 +666,8 @@ div.icon-sprite
 {
 	font-weight:bold;
 	color: #006E42;
-	font-size:1.333rem
-	
+	font-size:1.333rem;
+	text-transform: uppercase;	
 }
 .icon-link:hover,.icon-link:visited,.icon-link:link
 {
@@ -1102,4 +1137,16 @@ div.product_grid_display .product_grid_item
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
     border-right: 0px;
+}
+
+.claims-checkmarks ul{
+	list-style-image: url('img/sf-icon-checkmark-bullet-20x20.png');
+	color: #006f43;
+	font-size: 2rem;
+}
+.claims-checkmarks{
+	margin-top: 50px;
+}
+.claims-checkmarks p{
+	font-size: 2rem;
 }

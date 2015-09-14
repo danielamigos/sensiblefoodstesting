@@ -106,9 +106,18 @@
 				</nav>		
 				<div style="position:absolute; z-index:1001; right:0; margin-right:20px;margin-top:10px"><?php sensible_secondary_nav(); ?></div>
 				<div class="social-icons" style="">
-					<a href="http://twitter.com/Sensible_Foods" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/social-icons/sf-icon-twitter.png" alt ="Twitter" style="width:32px;" /></a>
-					<a href="http://www.facebook.com/pages/Blend-LLC-dba-Sensible-Foods/1536550946619716?fref=ts" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/social-icons/sf-icon-facebook.png" alt ="Facebook" style="width:32px;" /></a>
-					<a href="http://instagram.com/sensiblefoods/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/social-icons/sf-icon-instagram.png" alt ="Instagram" style="width:32px;"/></a>
+					<?PHP
+						$twitter_social_link = get_field('twitter_social_link','option');
+						$facebook_social_link = get_field('facebook_social_link','option');	
+						$instagram_social_link = get_field('instagram_social_link','option');
+					if($twitter_social_link!=''):
+					?>					
+						<a href="<?PHP echo $twitter_social_link; ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/social-icons/sf-icon-twitter.png" alt ="Twitter" style="width:32px;" /></a>
+					<?PHP endif; if($facebook_social_link != ''): ?>
+						<a href="<?PHP echo $facebook_social_link; ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/social-icons/sf-icon-facebook.png" alt ="Facebook" style="width:32px;" /></a>
+					<?PHP endif; if($instagram_social_link != ''): ?>
+						<a href="<?PHP echo $instagram_social_link; ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/social-icons/sf-icon-instagram.png" alt ="Instagram" style="width:32px;"/></a>
+					<?PHP endif; ?>
 				</div>
 				
 				<?PHP if(is_front_page()):?>
@@ -333,26 +342,33 @@
 			</header>
 			
 				
-			<?PHP if (is_front_page()):?>
+			<?PHP if (is_front_page()):
+				$secondary_menu_1_title = get_field('secondary_menu_1_title','option');
+				$secondary_menu_1_url = get_field('secondary_menu_1_url','option');	
+				$secondary_menu_2_title = get_field('secondary_menu_2_title','option');
+				$secondary_menu_2_url = get_field('secondary_menu_2_url','option');	
+				$secondary_menu_3_title = get_field('secondary_menu_3_title','option');
+				$secondary_menu_3_url = get_field('secondary_menu_3_url','option');	
+			?>
 			<div class="secondary-menu">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-4" style="text-align:center;margin: 5px 0;">
-							<a href="/shop/" target="_blank" class="icon-link" style="line-height: 60px;">
+							<a href="<?PHP echo $secondary_menu_1_url; ?>" class="icon-link" style="line-height: 60px;">
 								<div class="icon-sprite" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/sf-icon-shop.png); vertical-align:middle; margin-right:15px;"></div>
-								SHOP ONLINE
+								<?PHP echo $secondary_menu_1_title; ?>
 							</a>
 						</div>
 						<div class="col-md-4" style="text-align:center;margin: 5px 0;">
-							<a href="/recipes/" class="icon-link"  style="line-height: 60px;">
+							<a href="<?PHP echo $secondary_menu_2_url; ?>" class="icon-link"  style="line-height: 60px;">
 								<div class="icon-sprite" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/sf-icon-recipes.png); vertical-align:middle; margin-right:15px;"></div>
-								Recipes
+								<?PHP echo $secondary_menu_2_title; ?>
 							</a>
 						</div>
 						<div class="col-md-4" style="text-align:center;margin: 5px 0;">
-							<a href="/press/" class="icon-link"  style="line-height: 60px;">
+							<a href="<?PHP echo $secondary_menu_3_url; ?>" class="icon-link"  style="line-height: 60px;">
 								<div class="icon-sprite" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/sf-icon-newsletter.png); vertical-align:middle; margin-right:15px;"></div>
-								Testimonials
+								<?PHP echo $secondary_menu_3_title; ?>
 							</a>
 						</div>
 					</div>
