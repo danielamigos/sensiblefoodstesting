@@ -1,13 +1,13 @@
 <?php /* Template Name: Recipe Archive Template */ get_header(); ?>
-	<!--category.php-->
+	<!--single-recipe.php-->
 	<main role="main">
 		<!-- section -->
 		<section>
 			<div class="container-fluid" >
 				<div class="row" style="padding:0;    color: #006f43; font-size: 1.5rem;">
 					<div class="col-md-12" style="padding:0;">
-						<?PHP $cat_name = single_cat_title('',false); ?>
-						<h1 class="main-title" style="margin-left: 50px;"><?php echo $cat_name; ?></h1>
+	
+						<h1 class="main-title" style="margin-left: 50px;"><?php the_title(); ?></h1>
 						<div class="div-spacer">&nbsp;</div>
 						
 						<div class="container">
@@ -49,17 +49,11 @@
 								</div>
 								<div class="col-md-9">
 													
-								<?php //if (have_posts()): while (have_posts()) : the_post(); ?>
+								<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 								
-								<?php $args = array(
+								<?php
+										$args = array(
 											'post_type' => 'recipe',
-											'tax_query' => array(
-												array(
-													'taxonomy' => 'category',
-													'field'    => 'slug',
-													'terms'    => array($cat_name),
-												),
-											),
 										);
 										$my_query = new WP_Query($args);  
 									  if($my_query->have_posts()): while($my_query->have_posts()): $my_query->the_post(); ?>
@@ -90,7 +84,7 @@
 									<!-- article -->
 									<article>
 						
-										<h2><?php _e( 'Sorry, nothing to display. 1', 'sensible' ); ?></h2>
+										<h2><?php _e( 'Sorry, nothing to display.', 'sensible' ); ?></h2>
 						
 									</article>
 									<!-- /article -->
@@ -98,6 +92,17 @@
 								<?php endif; ?>
 								
 								
+								<?php endwhile; ?>
+								
+								<?php else: ?>
+								
+									<!-- article -->
+									<article>
+										<h2><?php _e( 'Sorry, nothing to display.', 'sensible' ); ?></h2>
+									</article>
+									<!-- /article -->
+								
+								<?php endif; ?>
 								
 								</div> <!---End Col-->
 							</div> <!---End Row-->

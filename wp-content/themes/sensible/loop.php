@@ -36,7 +36,7 @@
 
 	<!-- article -->
 	<article>
-		<h2><?php _e( 'Sorry, nothing to display.', 'sensible' ); ?></h2>
+		<h2><?php _e( 'Sorry, nothing to display here.', 'sensible' ); ?></h2>
 	</article>
 	<!-- /article -->
 

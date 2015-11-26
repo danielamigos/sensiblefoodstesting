@@ -821,13 +821,37 @@ span.rating_saved{
 	clear:both;
 }
 
+#checkout_page_container select,
 #checkout_page_container textarea,
 #checkout_page_container input,
 #content #checkout_page_container textarea,
 #content #checkout_page_container input {
-	line-height:1.2em;
-	font-size:14px;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 12px;
+	line-height: 1.42857143;
 	margin:0;
+}
+
+#checkout_page_container select,
+#checkout_page_container textarea,
+#checkout_page_container input[type="text"] {
+	display: block;
+	width: 100%;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+#checkout_page_container input[type="checkbox"] {
+	height: auto !important;
+	position: relative;
+}
+.wpsc_product_quantity input {
+	width: auto !important;
+	display: inline !important;
 }
 
 #content #checkout_page_container input[type="submit"] {
@@ -875,8 +899,8 @@ span.rating_saved{
 	margin-bottom: 0px;
 }
 
-.wpsc_checkout_table input.text{
-	width:255px;
+.borderless td, .borderless th {
+	border: none !important;
 }
 
 #content img#wpsc_checkout_gravatar{
@@ -936,6 +960,7 @@ background-color: #f5f5f5;
 #checkout_page_container p.validation-error {
 	clear:both;
 	color:red;
+	font-size: 12px;
 }
 
 #content table.wpsc_checkout_table,

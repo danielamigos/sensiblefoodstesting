@@ -1,5 +1,5 @@
 <?php /* Template Name: Recipe Archive Template */ get_header(); ?>
-	<!--category.php-->
+	<!--single-recipe.php-->
 	<main role="main">
 		<!-- section -->
 		<section>
@@ -13,9 +13,7 @@
 						<div class="container">
 							<div class="row" style="padding: 25px 20px;">
 								<div class="col-md-3">
-									<h3>Categories</h3>
-									<ul class="green">
-										<li><a href="/recipes/">All</a></li>
+									<ul>
 								<?php
 									$args = array(
 										'show_option_all'    => '',
@@ -33,7 +31,7 @@
 										'exclude_tree'       => '',
 										'include'            => '',
 										'hierarchical'       => 1,
-										'title_li'           => '',
+										'title_li'           => __( 'Categories' ),
 										'show_option_none'   => __( '' ),
 										'number'             => null,
 										'echo'               => 1,
@@ -49,19 +47,9 @@
 								</div>
 								<div class="col-md-9">
 													
-								<?php //if (have_posts()): while (have_posts()) : the_post(); ?>
+								<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 								
-								<?php $args = array(
-											'post_type' => 'recipe',
-											'tax_query' => array(
-												array(
-													'taxonomy' => 'category',
-													'field'    => 'slug',
-													'terms'    => array($cat_name),
-												),
-											),
-										);
-										$my_query = new WP_Query($args);  
+								<?php $my_query = new WP_Query('post_type=recipe&nopaging=1&category_name='.$cat_name); 
 									  if($my_query->have_posts()): while($my_query->have_posts()): $my_query->the_post(); ?>
 									  
 									  
@@ -90,7 +78,7 @@
 									<!-- article -->
 									<article>
 						
-										<h2><?php _e( 'Sorry, nothing to display. 1', 'sensible' ); ?></h2>
+										<h2><?php _e( 'Sorry, nothing to display.', 'sensible' ); ?></h2>
 						
 									</article>
 									<!-- /article -->
@@ -98,6 +86,17 @@
 								<?php endif; ?>
 								
 								
+								<?php endwhile; ?>
+								
+								<?php else: ?>
+								
+									<!-- article -->
+									<article>
+										<h2><?php _e( 'Sorry, nothing to display.', 'sensible' ); ?></h2>
+									</article>
+									<!-- /article -->
+								
+								<?php endif; ?>
 								
 								</div> <!---End Col-->
 							</div> <!---End Row-->
