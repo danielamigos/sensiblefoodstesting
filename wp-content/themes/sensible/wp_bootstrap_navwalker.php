@@ -23,6 +23,7 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
 		$indent = str_repeat( "\t", $depth );
 		$output .= "\n$indent<ul role=\"menu\" class=\" dropdown-menu\">\n";
 	}
+	
 
 	/**
 	 * @see Walker::start_el()

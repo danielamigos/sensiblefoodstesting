@@ -90,7 +90,7 @@ function sensible_nav()
 		'after'           => '',
 		'link_before'     => '',
 		'link_after'      => '',
-		'items_wrap'      => '<ul>%3$s</ul>',
+		'items_wrap'      => '<ul>%3$s <li class="bf-banner-image-li"><img class="bf-banner-image" src="'.get_template_directory_uri().'/img/BFBanner.jpg"/></li></ul>',
 		'depth'           => 0,
 		'walker'          => ''
 		)
@@ -105,7 +105,8 @@ function sensible_bootstrap_nav()
 			'container'         => 'div',
 			'container_class'   => 'collapse navbar-collapse',
 			'container_id'      => 'bs-example-navbar-collapse-1',
-			'menu_class'        => 'nav navbar-nav',
+			//'menu_class'        => 'nav navbar-nav',
+		    'items_wrap'        => '<ul id="menu-main-menu" class="nav navbar-nav">%3$s<li class="bf-banner-image-li"><img class="bf-banner-image" src="'.get_template_directory_uri().'/img/BFBanner.jpg"/></li></ul>',
 			'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
 			'walker'            => new wp_bootstrap_navwalker())
 		);

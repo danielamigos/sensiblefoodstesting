@@ -614,6 +614,16 @@ ul.navbar-nav {
     text-align: center;
 }
 
+.bf-banner-image-li
+{ 
+    width: auto;
+}
+.bf-banner-image
+{
+    height: 39px;
+    margin-top: 32px;
+}
+
 @media (min-width: 768px) {
     body {
         font: 300 10px/1.4 "Trebuchet MS", Helvetica, sans-serif;
@@ -666,6 +676,16 @@ ul.navbar-nav {
         display: table-cell;
         vertical-align: top;
     }
+    
+    .bf-banner-image-li
+    { 
+        width: auto;
+    }
+    .bf-banner-image
+    {
+        height: 39px;
+        margin-top: 32px;
+    }
 
 }
 
@@ -683,6 +703,16 @@ ul.navbar-nav {
     .slideshow-wrapper {
         width: 1200px;
     }
+    
+    .bf-banner-image-li
+    { 
+        width: auto;
+    }
+    .bf-banner-image
+    {    
+        height: 45px;
+        margin-top: 28px;    
+    }
 
 }
 
@@ -694,6 +724,16 @@ ul.navbar-nav {
 
     .container {
         width: 1470px;
+    }
+    
+    .bf-banner-image-li
+    { 
+        width: 460px;
+    }
+    .bf-banner-image
+    {
+        height: 50px;
+        margin-top: 25px;
     }
 }
 

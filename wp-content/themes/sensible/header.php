@@ -131,8 +131,9 @@
                 </div>
             </div>
         </nav>
-        <div
-            style="position:absolute; z-index:1001; right:0; margin-right:20px;margin-top:10px"><?php sensible_secondary_nav(); ?></div>
+        <div style="position:absolute; z-index:1001; right:0; margin-right:20px;margin-top:10px">
+            <?php sensible_secondary_nav(); ?>
+        </div>
         <div class="social-icons" style="">
             <?PHP
             $twitter_social_link = get_field('twitter_social_link', 'option');
